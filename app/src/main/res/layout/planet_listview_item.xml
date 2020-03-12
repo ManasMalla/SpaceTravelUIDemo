@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/planet_cardView"
+        android:layout_width="0dp"
+        android:layout_height="124dp"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginBottom="32dp"
+        app:cardBackgroundColor="#434273"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="10dp"
+        android:transitionName="@string/transitionName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/planet_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:transitionName="@string/planetNameTransition"
+                android:layout_marginStart="76dp"
+                android:layout_marginLeft="76dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Mars"
+                android:textColor="#FFF"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/planet_description_txtView"
+                android:transitionName="@string/planetDescTransition"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Milkyway Galaxy"
+                android:textColor="#B0AEBF"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="@+id/planet_name"
+                app:layout_constraintTop_toBottomOf="@+id/planet_name" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <ImageView
+        android:id="@+id/planet_imgView"
+        android:layout_width="92dp"
+        android:layout_height="92dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:elevation="18dp"
+        android:transitionName="@string/planetImageTransition"
+        app:layout_constraintBottom_toBottomOf="@+id/planet_cardView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/planet_cardView"
+        app:srcCompat="@drawable/mars" />
+</androidx.constraintlayout.widget.ConstraintLayout>
